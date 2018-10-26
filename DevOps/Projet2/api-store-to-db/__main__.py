@@ -54,7 +54,7 @@ def main():
 
     # Init connexion to mongodb
     # for exemple : mongodb+srv://26academy:<PASSWORD>@cluster0-bihus.mongodb.net/test?retryWrites=true
-    client = MongoClient('mongodb://{}:{}'.format(hostname, port))
+    client = MongoClient('mongodb://{}:{}@{}:{}'.format(user, password, hostname, port))
     
     database = client[database]
     collection = database['bracelet']
